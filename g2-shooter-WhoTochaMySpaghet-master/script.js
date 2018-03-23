@@ -53,8 +53,8 @@ function setup(){
 	scoreDisplay = select("#score-display");
 	shipColor = "00ff00";
 	score = 0;
-	//scoreDisplay.html(score)
-	//resetGame();
+	scoreDisplay.html(score)
+	resetGame();
 }
 /*
  * gameOver()
@@ -74,7 +74,7 @@ function gameOver(){
  */
 function resetGame(){
 	score = 0;
-	//scoreDisplay.html(score);
+	scoreDisplay.html(score);
 	resetGame();
 	gameRunning =  true;
 }
@@ -143,7 +143,7 @@ function drawBullet(){
 	if(bulletY>0){
 		fill(66, 244, 128);
 		bulletY -= 10;
-		ellipse(bulletX,bulletY,bulletDiameter,bulletDiameter);
+		ellipse(bulletX,bulletY,bulletDiameter);
 	}
 	else{
 		shipShooting=false;	 
@@ -206,7 +206,7 @@ function resetAlien(){
 	alienVelocity = 10;
 	resetAlien();
 	alienVelocity++;
-	abs(-3);
+	//abs(-3);
 }
 
 /*
